@@ -1,0 +1,14 @@
+.special {
+  margin: 0 30px !important;
+
+  .chip {
+    margin-left: 10px !important;
+    color: #786ad6 !important;
+    background-color: #ece8fd !important;
+  }
+  .card:hover {
+    transform: scaleY(1.1);
+    cursor: pointer;
+    transition: all 0.6 s ease-in;
+  }
+}

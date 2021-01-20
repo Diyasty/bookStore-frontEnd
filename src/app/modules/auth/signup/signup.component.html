@@ -1,0 +1,68 @@
+<div class="container">
+  <h1 style="margin: 1rem 25%">Sign up</h1>
+
+  <form
+    #RegisterForm="ngForm"
+    (ngSubmit)="onSubmit(RegisterForm)"
+    [formGroup]="Form"
+    class="row"
+  >
+    <div class="col m8">
+      <label for="FirstName" style="font-weight: 700; color: red"
+        >First Name</label
+      >
+      <input
+        type="text"
+        name="FirstName"
+        formControlName="firstName"
+        placeholder="Enter First Name"
+      />
+    </div>
+    <div class="col m8">
+      <label for="email" style="font-weight: 700; color: red">Last Name</label>
+      <input
+        type="text"
+        name="Last Name"
+        formControlName="lastName"
+        placeholder="Enter Last Name"
+      />
+    </div>
+    <div class="col m8">
+      <label for="email" style="font-weight: 700; color: red">Email</label>
+      <input
+        type="text"
+        name="email"
+        formControlName="email"
+        placeholder="Enter Email"
+      />
+    </div>
+    <div class="col m8">
+      <label style="font-weight: 700; color: red" for="password"
+        >Password</label
+      >
+      <input
+        type="password"
+        formControlName="password"
+        name="password"
+        placeholder="Enter password"
+      />
+    </div>
+    <div class="col m8">
+      <span *ngIf="Form.errors?.invalid"> Password doesn't match </span>
+      <label style="font-weight: 700; color: red" for="password"
+        >Confirm Password</label
+      >
+
+      <input
+        type="password"
+        formControlName="confirmPassword"
+        name="password"
+        placeholder="Confirm Password"
+      />
+    </div>
+
+    <button style="margin: 1rem 25%" class="btn waves btn-waves" type="submit">
+      Sign up
+    </button>
+  </form>
+</div>

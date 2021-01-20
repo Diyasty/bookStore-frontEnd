@@ -1,0 +1,107 @@
+<div class="space"></div>
+<div class="nav">
+  <div class="row">
+    <div class="col m3 s12">
+      <div class="row">
+        <div class="col m3">
+          <i
+            class="material-icons medium border"
+            style="background-color: #5207dd; color: #fff"
+            >assignment</i
+          >
+        </div>
+        <div class="col m9" style="margin-top: 17px">
+          <h2
+            style="
+              font-weight: 700;
+              margin-left: 10px !important;
+              line-height: 0;
+            "
+          >
+            Booky
+          </h2>
+          <p style="font-weight: 900; margin-left: 7px">Book Store app</p>
+        </div>
+      </div>
+    </div>
+    <div class="col m6 s12">
+      <div class="row" style="position: relative; margin-top: 17px">
+        <input
+          type="text"
+          class="searchInput"
+          matInput
+          name="search"
+          placeholder="Enter book title or Author Name"
+        />
+
+        <div class="searchIcon material-icons large">search</div>
+      </div>
+    </div>
+    <div class="col m3 s12">
+      <div class="row" style="position: relative; margin-top: 26px">
+        <ng-container *ngIf="!isLogin; else elseTemplate">
+          <app-btn-light
+            *ngIf="!isLogin"
+            [routerLink]="['/auth', 'login']"
+            [btnText]="btnLight"
+          ></app-btn-light>
+          <app-btn
+            *ngIf="!isLogin"
+            [routerLink]="['/auth', 'signup']"
+            [btnText]="btnName"
+            [iconText]="iconName"
+          ></app-btn>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <div class="row" style="margin-top: -12px">
+            <div class="col s3">
+              <button
+                *ngIf="isLogin"
+                class="btn-floating btn-large waves-effect waves-light"
+              >
+                <img
+                  src="https://materializecss.com/images/yuna.jpg"
+                  alt=""
+                  class="circle responsive-img"
+                />
+              </button>
+            </div>
+            <!-- notice the "circle" class -->
+            <div class="col s3" style="position: relative">
+              <button
+                style="background-color: #5207dd"
+                *ngIf="isLogin"
+                class="btn-floating btn-large waves-effect waves-light"
+              >
+                <span
+                  style="
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -16px;
+                    left: 30px;
+                  "
+                  >4</span
+                >
+
+                <i class="material-icons">shopping_cart</i>
+              </button>
+            </div>
+            <div class="col s6" style="margin-top: 10px">
+              <button
+                style="
+                  background-color: #dad8dc6b !important;
+                  color: #5207dd !important;
+                "
+                *ngIf="isLogin"
+                class="btn pink accent-4"
+                (click)="logout()"
+              >
+                Log Out
+              </button>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

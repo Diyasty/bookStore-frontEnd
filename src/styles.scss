@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+.arrow_left {
+  cursor: pointer;
+  background-color: #2d617c;
+  border-radius: 50%;
+  top: 120px;
+  left: 11px;
+  position: absolute;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+.owl-theme .owl-nav [class*="owl-"] {
+  background: transparent !important;
+  &::hover {
+    background: transparent !important;
+  }
+}
+// .owl-theme .owl-nav [class="owl-next"] {
+//   background: transparent;
+//   padding: 0;
+//   &::hover {
+//     background: transparent;
+//   }
+// }
+
+// .owl-theme .owl-nav [class="owl-prev"] {
+//   background: transparent;
+//   padding: 0;
+//   &::hover {
+//     background: transparent;
+//   }
+// }
+.arrow_right {
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: #2d617c;
+
+  top: 120px;
+  right: 11px;
+  position: absolute;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Langar&display=swap");
+@import url("../node_modules/font-awesome/css/font-awesome.css");
+@import url("../node_modules/materialize-css/dist/css/materialize.min.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  box-sizing: inherit;
+  height: 100% !important;
+}
+body {
+  font-family: "Langar", cursive !important;
+
+  font-size: 16px;
+}
+.border {
+  border-radius: 15px;
+  box-shadow: 0px 10px -14px 14px rgb(59, 54, 54);
+}
+.section {
+  margin: 20px auto;
+}
+input {
+  &:focus:not([readonly]) {
+    color: #5207dd !important;
+  }
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid #5207dd !important;
+    box-shadow: 0 1px 0 0 #5207dd !important;
+  }
+}

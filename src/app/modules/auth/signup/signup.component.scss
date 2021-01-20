@@ -1,0 +1,15 @@
+input {
+  padding: 1rem;
+  margin: 1rem;
+  &:focus:not([readonly]) {
+    color: #5207dda6 !important;
+  }
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid #8c849c !important;
+    box-shadow: 0 1px 0 0 #5207dda2 !important;
+  }
+}
+
+button {
+  background-color: #5207dd !important;
+}

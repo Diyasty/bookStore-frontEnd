@@ -1,0 +1,52 @@
+<div class="contet">
+  <div class="menu border">
+    <div
+      class="row"
+      style="border-bottom: 1px solid rgba(226, 206, 206, 0.568)"
+    >
+      <div class="col m9">
+        <h3
+          style="font-weight: 500"
+          (click)="showItem(m1, iz)"
+          class="dropdown-trigger"
+        >
+          Editor Picks
+        </h3>
+      </div>
+      <div class="col m3">
+        <i
+          #iz
+          class="fa fa-minus"
+          style="margin-right: 2px; font-weight: 900"
+          aria-hidden="true"
+        ></i>
+      </div>
+    </div>
+    <div class="menu-container" #m1>
+      <div class="menu-item" *ngFor="let item of collection; let i = index">
+        <i
+          class="fa fa-minus"
+          style="color: blueviolet; margin-right: 9px"
+          aria-hidden="true"
+          #icon
+        ></i>
+        <h3
+          style="color: blueviolet; display: inline-flex; font-weight: 400"
+          class="dropdown-trigger"
+          data-target="dropdown1"
+          (click)="showMenu(ul1, icon)"
+        >
+          {{ item.title }}
+        </h3>
+        <ul #ul1>
+          <li *ngFor="let item2 of item.books">
+            <a href="" style="text-decoration: none; color: brown"
+              ><h4 style="font-weight: 300">{{ item2.title }}</h4></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px" class="menu border">welcome</div>
+</div>
